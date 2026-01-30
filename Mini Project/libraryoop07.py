@@ -1,5 +1,5 @@
-
-# Parent Class (ABSTRACTION)
+#implementation of 4 pillars of Oops in python
+# Parent Class(ABSTRACTION)
 
 class LibraryItem:
     def __init__(self):
@@ -11,7 +11,7 @@ class LibraryItem:
     def _set_charge(self, amount):
         self.__charge = amount
         
-class Book(LibraryItem):
+class Book(LibraryItem):   #INHERITANCE
     def calculate_charge(self, days):   # POLYMORPHISM
         charge = days * 10   
         self._set_charge(charge)
@@ -38,3 +38,4 @@ magazine = Magazine()
 app = LibraryApp()
 app.borrow_item(book, 5)
 app.borrow_item(magazine, 3)
+
